@@ -1,0 +1,599 @@
+html {
+  font-family: Rubik;
+  padding: 55px 136px;
+}
+
+body {
+  max-width: 1440px;
+  width: 100%;
+}
+
+:root {
+  --primary-color: #363853;
+  --secondary-color: #ff7a50;
+  --main-back-white: #fff;
+  --radius: 10rem;
+  --black: #3D3D3D;
+}
+
+.second-color {
+  color: var(--secondary-color);
+}
+
+.btn {
+  padding: 15px 28px;
+  height: 50px;
+  border: 0;
+  border-radius: 5px;
+  background: var(--secondary-color);
+  box-shadow: 0px 22px 40px 0px rgba(255, 104, 56, 0.19);
+  color: var(--main-back-white);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  transition: 0.5s ease;
+}
+.btn:hover {
+  background-color: var(--primary-color);
+  transition: 0.5s ease;
+}
+
+nav {
+  display: flex;
+  gap: 60px;
+}
+
+.img-msg-box {
+  position: relative;
+  content: "";
+  right: 25%;
+  top: 40%;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: red;
+  border-radius: 6px;
+  background: radial-gradient(50% 50% at 50% 50%, #FEF8F5 0%, rgba(255, 255, 255, 0.79) 100%);
+  z-index: 99;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+  animation: rotatingWindows 15s linear infinite;
+  padding: 5px 9px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3px;
+}
+.img-msg-box_1 {
+  border-radius: 50%;
+  border-width: 3px;
+  border-color: white;
+  overflow: hidden;
+}
+.img-msg-box_1 img {
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+.img-msg-box_3 {
+  align-items: center;
+}
+
+.driver-name {
+  color: var(--black, #3D3D3D);
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+}
+.driver-position {
+  color: var(--black, #3D3D3D);
+  font-size: 7px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-transform: capitalize;
+}
+
+.header-bar {
+  max-width: 1171px;
+  width: 100%;
+  max-height: 50px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 105px;
+}
+.header-logo {
+  color: var(--secondary-color);
+  font-family: Rubik;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.65px;
+}
+.header-logo span {
+  color: var(--primary-color);
+  font-family: Rubik;
+  font-size: 33px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 1.65px;
+}
+.header-nav {
+  display: flex;
+  width: 624px;
+  justify-content: space-between;
+  gap: 60px;
+  align-items: center;
+}
+.header-preview {
+  max-width: 1171px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+}
+.header-preview__text {
+  width: 45%;
+  height: 681px;
+  max-width: 530px;
+  width: 100%;
+}
+.header-preview__text-title {
+  color: var(--primary-color);
+  font-size: 66px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  text-transform: capitalize;
+  margin-bottom: 23px;
+}
+.header-preview__text-text {
+  color: var(--primary-color);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 30px;
+  text-transform: capitalize;
+  margin-bottom: 45px;
+}
+.header-preview__text-btns {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+}
+.header-preview__text-btn {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.header-preview__text-dowloaApp {
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  text-decoration-line: underline;
+}
+.header-preview__images {
+  width: 55%;
+}
+.header-preview__images .img-driver {
+  position: relative;
+  max-width: 100%;
+  z-index: -1;
+}
+
+@keyframes rotatingWindows {
+  0%, 100% {
+    transform: translate(var(--radius), 0);
+  }
+  /* Use calc() to calculate the circular movement */
+  /* Each step is 360 degrees / 100 */
+  1% {
+    transform: translate(calc(var(--radius) * sin(3.6deg)), calc(var(--radius) * cos(3.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  2% {
+    transform: translate(calc(var(--radius) * sin(7.2deg)), calc(var(--radius) * cos(7.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  3% {
+    transform: translate(calc(var(--radius) * sin(10.8deg)), calc(var(--radius) * cos(10.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  4% {
+    transform: translate(calc(var(--radius) * sin(14.4deg)), calc(var(--radius) * cos(14.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  5% {
+    transform: translate(calc(var(--radius) * sin(18deg)), calc(var(--radius) * cos(18deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  6% {
+    transform: translate(calc(var(--radius) * sin(21.6deg)), calc(var(--radius) * cos(21.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  7% {
+    transform: translate(calc(var(--radius) * sin(25.2deg)), calc(var(--radius) * cos(25.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  8% {
+    transform: translate(calc(var(--radius) * sin(28.8deg)), calc(var(--radius) * cos(28.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  9% {
+    transform: translate(calc(var(--radius) * sin(32.4deg)), calc(var(--radius) * cos(32.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  10% {
+    transform: translate(calc(var(--radius) * sin(36deg)), calc(var(--radius) * cos(36deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  11% {
+    transform: translate(calc(var(--radius) * sin(39.6deg)), calc(var(--radius) * cos(39.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  12% {
+    transform: translate(calc(var(--radius) * sin(43.2deg)), calc(var(--radius) * cos(43.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  13% {
+    transform: translate(calc(var(--radius) * sin(46.8deg)), calc(var(--radius) * cos(46.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  14% {
+    transform: translate(calc(var(--radius) * sin(50.4deg)), calc(var(--radius) * cos(50.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  15% {
+    transform: translate(calc(var(--radius) * sin(54deg)), calc(var(--radius) * cos(54deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  16% {
+    transform: translate(calc(var(--radius) * sin(57.6deg)), calc(var(--radius) * cos(57.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  17% {
+    transform: translate(calc(var(--radius) * sin(61.2deg)), calc(var(--radius) * cos(61.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  18% {
+    transform: translate(calc(var(--radius) * sin(64.8deg)), calc(var(--radius) * cos(64.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  19% {
+    transform: translate(calc(var(--radius) * sin(68.4deg)), calc(var(--radius) * cos(68.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  20% {
+    transform: translate(calc(var(--radius) * sin(72deg)), calc(var(--radius) * cos(72deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  21% {
+    transform: translate(calc(var(--radius) * sin(75.6deg)), calc(var(--radius) * cos(75.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  22% {
+    transform: translate(calc(var(--radius) * sin(79.2deg)), calc(var(--radius) * cos(79.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  23% {
+    transform: translate(calc(var(--radius) * sin(82.8deg)), calc(var(--radius) * cos(82.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  24% {
+    transform: translate(calc(var(--radius) * sin(86.4deg)), calc(var(--radius) * cos(86.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  25% {
+    transform: translate(calc(var(--radius) * sin(90deg)), calc(var(--radius) * cos(90deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  26% {
+    transform: translate(calc(var(--radius) * sin(93.6deg)), calc(var(--radius) * cos(93.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  27% {
+    transform: translate(calc(var(--radius) * sin(97.2deg)), calc(var(--radius) * cos(97.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  28% {
+    transform: translate(calc(var(--radius) * sin(100.8deg)), calc(var(--radius) * cos(100.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  29% {
+    transform: translate(calc(var(--radius) * sin(104.4deg)), calc(var(--radius) * cos(104.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  30% {
+    transform: translate(calc(var(--radius) * sin(108deg)), calc(var(--radius) * cos(108deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  31% {
+    transform: translate(calc(var(--radius) * sin(111.6deg)), calc(var(--radius) * cos(111.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  32% {
+    transform: translate(calc(var(--radius) * sin(115.2deg)), calc(var(--radius) * cos(115.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  33% {
+    transform: translate(calc(var(--radius) * sin(118.8deg)), calc(var(--radius) * cos(118.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  34% {
+    transform: translate(calc(var(--radius) * sin(122.4deg)), calc(var(--radius) * cos(122.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  35% {
+    transform: translate(calc(var(--radius) * sin(126deg)), calc(var(--radius) * cos(126deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  36% {
+    transform: translate(calc(var(--radius) * sin(129.6deg)), calc(var(--radius) * cos(129.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  37% {
+    transform: translate(calc(var(--radius) * sin(133.2deg)), calc(var(--radius) * cos(133.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  38% {
+    transform: translate(calc(var(--radius) * sin(136.8deg)), calc(var(--radius) * cos(136.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  39% {
+    transform: translate(calc(var(--radius) * sin(140.4deg)), calc(var(--radius) * cos(140.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  40% {
+    transform: translate(calc(var(--radius) * sin(144deg)), calc(var(--radius) * cos(144deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  41% {
+    transform: translate(calc(var(--radius) * sin(147.6deg)), calc(var(--radius) * cos(147.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  42% {
+    transform: translate(calc(var(--radius) * sin(151.2deg)), calc(var(--radius) * cos(151.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  43% {
+    transform: translate(calc(var(--radius) * sin(154.8deg)), calc(var(--radius) * cos(154.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  44% {
+    transform: translate(calc(var(--radius) * sin(158.4deg)), calc(var(--radius) * cos(158.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  45% {
+    transform: translate(calc(var(--radius) * sin(162deg)), calc(var(--radius) * cos(162deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  46% {
+    transform: translate(calc(var(--radius) * sin(165.6deg)), calc(var(--radius) * cos(165.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  47% {
+    transform: translate(calc(var(--radius) * sin(169.2deg)), calc(var(--radius) * cos(169.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  48% {
+    transform: translate(calc(var(--radius) * sin(172.8deg)), calc(var(--radius) * cos(172.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  49% {
+    transform: translate(calc(var(--radius) * sin(176.4deg)), calc(var(--radius) * cos(176.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  50% {
+    transform: translate(calc(var(--radius) * sin(180deg)), calc(var(--radius) * cos(180deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  51% {
+    transform: translate(calc(var(--radius) * sin(183.6deg)), calc(var(--radius) * cos(183.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  52% {
+    transform: translate(calc(var(--radius) * sin(187.2deg)), calc(var(--radius) * cos(187.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  53% {
+    transform: translate(calc(var(--radius) * sin(190.8deg)), calc(var(--radius) * cos(190.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  54% {
+    transform: translate(calc(var(--radius) * sin(194.4deg)), calc(var(--radius) * cos(194.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  55% {
+    transform: translate(calc(var(--radius) * sin(198deg)), calc(var(--radius) * cos(198deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  56% {
+    transform: translate(calc(var(--radius) * sin(201.6deg)), calc(var(--radius) * cos(201.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  57% {
+    transform: translate(calc(var(--radius) * sin(205.2deg)), calc(var(--radius) * cos(205.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  58% {
+    transform: translate(calc(var(--radius) * sin(208.8deg)), calc(var(--radius) * cos(208.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  59% {
+    transform: translate(calc(var(--radius) * sin(212.4deg)), calc(var(--radius) * cos(212.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  60% {
+    transform: translate(calc(var(--radius) * sin(216deg)), calc(var(--radius) * cos(216deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  61% {
+    transform: translate(calc(var(--radius) * sin(219.6deg)), calc(var(--radius) * cos(219.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  62% {
+    transform: translate(calc(var(--radius) * sin(223.2deg)), calc(var(--radius) * cos(223.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  63% {
+    transform: translate(calc(var(--radius) * sin(226.8deg)), calc(var(--radius) * cos(226.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  64% {
+    transform: translate(calc(var(--radius) * sin(230.4deg)), calc(var(--radius) * cos(230.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  65% {
+    transform: translate(calc(var(--radius) * sin(234deg)), calc(var(--radius) * cos(234deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  66% {
+    transform: translate(calc(var(--radius) * sin(237.6deg)), calc(var(--radius) * cos(237.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  67% {
+    transform: translate(calc(var(--radius) * sin(241.2deg)), calc(var(--radius) * cos(241.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  68% {
+    transform: translate(calc(var(--radius) * sin(244.8deg)), calc(var(--radius) * cos(244.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  69% {
+    transform: translate(calc(var(--radius) * sin(248.4deg)), calc(var(--radius) * cos(248.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  70% {
+    transform: translate(calc(var(--radius) * sin(252deg)), calc(var(--radius) * cos(252deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  71% {
+    transform: translate(calc(var(--radius) * sin(255.6deg)), calc(var(--radius) * cos(255.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  72% {
+    transform: translate(calc(var(--radius) * sin(259.2deg)), calc(var(--radius) * cos(259.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  73% {
+    transform: translate(calc(var(--radius) * sin(262.8deg)), calc(var(--radius) * cos(262.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  74% {
+    transform: translate(calc(var(--radius) * sin(266.4deg)), calc(var(--radius) * cos(266.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  75% {
+    transform: translate(calc(var(--radius) * sin(270deg)), calc(var(--radius) * cos(270deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  76% {
+    transform: translate(calc(var(--radius) * sin(273.6deg)), calc(var(--radius) * cos(273.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  77% {
+    transform: translate(calc(var(--radius) * sin(277.2deg)), calc(var(--radius) * cos(277.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  78% {
+    transform: translate(calc(var(--radius) * sin(280.8deg)), calc(var(--radius) * cos(280.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  79% {
+    transform: translate(calc(var(--radius) * sin(284.4deg)), calc(var(--radius) * cos(284.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  80% {
+    transform: translate(calc(var(--radius) * sin(288deg)), calc(var(--radius) * cos(288deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  81% {
+    transform: translate(calc(var(--radius) * sin(291.6deg)), calc(var(--radius) * cos(291.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  82% {
+    transform: translate(calc(var(--radius) * sin(295.2deg)), calc(var(--radius) * cos(295.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  83% {
+    transform: translate(calc(var(--radius) * sin(298.8deg)), calc(var(--radius) * cos(298.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  84% {
+    transform: translate(calc(var(--radius) * sin(302.4deg)), calc(var(--radius) * cos(302.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  85% {
+    transform: translate(calc(var(--radius) * sin(306deg)), calc(var(--radius) * cos(306deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  86% {
+    transform: translate(calc(var(--radius) * sin(309.6deg)), calc(var(--radius) * cos(309.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  87% {
+    transform: translate(calc(var(--radius) * sin(313.2deg)), calc(var(--radius) * cos(313.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  88% {
+    transform: translate(calc(var(--radius) * sin(316.8deg)), calc(var(--radius) * cos(316.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  89% {
+    transform: translate(calc(var(--radius) * sin(320.4deg)), calc(var(--radius) * cos(320.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  90% {
+    transform: translate(calc(var(--radius) * sin(324deg)), calc(var(--radius) * cos(324deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  91% {
+    transform: translate(calc(var(--radius) * sin(327.6deg)), calc(var(--radius) * cos(327.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  92% {
+    transform: translate(calc(var(--radius) * sin(331.2deg)), calc(var(--radius) * cos(331.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  93% {
+    transform: translate(calc(var(--radius) * sin(334.8deg)), calc(var(--radius) * cos(334.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  94% {
+    transform: translate(calc(var(--radius) * sin(338.4deg)), calc(var(--radius) * cos(338.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  95% {
+    transform: translate(calc(var(--radius) * sin(342deg)), calc(var(--radius) * cos(342deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  96% {
+    transform: translate(calc(var(--radius) * sin(345.6deg)), calc(var(--radius) * cos(345.6deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  97% {
+    transform: translate(calc(var(--radius) * sin(349.2deg)), calc(var(--radius) * cos(349.2deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  98% {
+    transform: translate(calc(var(--radius) * sin(352.8deg)), calc(var(--radius) * cos(352.8deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  99% {
+    transform: translate(calc(var(--radius) * sin(356.4deg)), calc(var(--radius) * cos(356.4deg)));
+  }
+  /* Each step is 360 degrees / 100 */
+  100% {
+    transform: translate(calc(var(--radius) * sin(360deg)), calc(var(--radius) * cos(360deg)));
+  }
+}/*# sourceMappingURL=style.css.map */
