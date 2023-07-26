@@ -1,0 +1,78 @@
+@import url('./../0.root/root.css');
+
+
+.food-box {
+    width: 210px;
+    height: 70px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
+    transition: .5s ease;
+    margin-bottom: 40px;
+    color: var(--primary, #363853);
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    cursor: pointer;
+
+    &:hover {
+        background: var(--secondary, #FF7A50);
+        transition: .5s ease;
+        color: white;
+    }
+
+    &:active{
+        transform: scale(.95);
+        transition: 0s ease;
+    }
+
+    &:hover &_image svg {
+        fill: white;
+    }
+
+    &_image svg {
+        fill: var(--primary, #363853);
+        ;
+    }
+}
+
+.section-popular {
+
+    &__title {
+        color: var(--primary, #363853);
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        text-transform: capitalize;
+        margin: 0 auto;
+        text-align: center;
+        margin-bottom: 55px;
+    }
+
+    &__food-cathegory {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+    }
+
+}
+
+
+/*Slider */
+.slider{
+    height: 350px;
+    width: 100%;
+    background: tomato;
+    text-align: center;
+    margin-bottom: 87px;
+}

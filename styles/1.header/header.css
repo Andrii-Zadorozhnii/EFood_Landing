@@ -1,3 +1,4 @@
+@import url("./../0.root/root.css");
 html {
   font-family: Rubik;
   padding: 55px 136px;
@@ -6,14 +7,6 @@ html {
 body {
   max-width: 1440px;
   width: 100%;
-}
-
-:root {
-  --primary-color: #363853;
-  --secondary-color: #ff7a50;
-  --main-back-white: #fff;
-  --radius: 10rem;
-  --black: #3D3D3D;
 }
 
 .second-color {
@@ -39,6 +32,11 @@ body {
   background-color: var(--primary-color);
   transition: 0.5s ease;
 }
+.btn:active {
+  transform: scale(0.95);
+  transition: 0s ease;
+  background-color: var(--primary-color);
+}
 
 nav {
   display: flex;
@@ -46,7 +44,7 @@ nav {
 }
 
 .img-msg-box {
-  position: relative;
+  position: absolute;
   content: "";
   right: 25%;
   top: 40%;
@@ -59,7 +57,7 @@ nav {
   background: radial-gradient(50% 50% at 50% 50%, #FEF8F5 0%, rgba(255, 255, 255, 0.79) 100%);
   z-index: 99;
   box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.12);
-  animation: rotatingWindows 15s linear infinite;
+  animation: rotatingWindows 30s linear infinite;
   padding: 5px 9px;
   display: flex;
   align-items: center;
@@ -596,4 +594,4 @@ nav {
   100% {
     transform: translate(calc(var(--radius) * sin(360deg)), calc(var(--radius) * cos(360deg)));
   }
-}/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=header.css.map */
