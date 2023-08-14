@@ -1,0 +1,19 @@
+.section-app__screenshots {
+  display: flex;
+}
+
+.screenshot-1 {
+  position: relative;
+  left: 105px;
+  z-index: 1;
+}
+
+.screenshot-2 {
+  z-index: 2;
+}
+
+.screenshot-3 {
+  position: relative;
+  right: 105px;
+  z-index: 1;
+}/*# sourceMappingURL=section-app.css.map */

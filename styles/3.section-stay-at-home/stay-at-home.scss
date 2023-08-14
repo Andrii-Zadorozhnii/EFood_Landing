@@ -1,6 +1,9 @@
-.stay-at-home {
+.section-stayAtHome {
   margin-bottom: 128px;
 
+}
+
+.stay-at-home {
   &__title {
     width: 384px;
     font-size: 36px;
@@ -22,15 +25,18 @@
   }
 
   &__statistics {
-    &:nth-child(n) {
-      margin-bottom: 25px;
-    }
+
 
     &-data {
       display: flex;
       justify-content: start;
       align-items: center;
       gap: 32px;
+      margin-bottom: 25px;
+
+      &:last-child {
+        margin-bottom: 50px;
+      }
     }
   }
 }

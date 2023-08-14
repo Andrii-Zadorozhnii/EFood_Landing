@@ -1,7 +1,14 @@
-body{
+body {
     margin: 0 auto;
 }
 
 html {
-    background: #f8f8fe
+    background: #f9f9fc;
+}
+.grid-container {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(auto-fill, minmax(361px, 1fr));
+    gap: 10px; 
+    row-gap: 43px;
 }
