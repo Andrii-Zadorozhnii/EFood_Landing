@@ -1,12 +1,12 @@
 .section-topFood {
   margin-bottom: 165px;
+
   &__header {
     text-align: center;
   }
 
   &__cards {
-    /* display: flex;
-    flex-wrap: wrap; */
+
     justify-content: space-between;
 
     &-card {
@@ -63,4 +63,8 @@
   height: 33px;
   display: flex;
   align-items: center;
+  animation: pulsate 2s infinite;
+    &:nth-child(odd) {
+    animation-delay: 1s;
+  }
 }

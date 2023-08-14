@@ -5,8 +5,6 @@
   text-align: center;
 }
 .section-topFood__cards {
-  /* display: flex;
-  flex-wrap: wrap; */
   justify-content: space-between;
 }
 .section-topFood__cards-card {
@@ -50,4 +48,8 @@
   height: 33px;
   display: flex;
   align-items: center;
+  animation: pulsate 2s infinite;
+}
+.top-food-btn:nth-child(odd) {
+  animation-delay: 1s;
 }/*# sourceMappingURL=section-top-food.css.map */
