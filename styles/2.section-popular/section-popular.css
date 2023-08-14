@@ -34,6 +34,9 @@
   fill: var(--primary, #363853);
 }
 
+.section-popular {
+  margin-bottom: 87px;
+}
 .section-popular__title {
   color: var(--primary, #363853);
   font-size: 36px;
@@ -125,4 +128,6 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-}/*# sourceMappingURL=section-popular.css.map */
+}
+
+/*# sourceMappingURL=section-popular.css.map */
