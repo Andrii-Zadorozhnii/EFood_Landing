@@ -25,6 +25,9 @@ const sectionFeedback = document.querySelector('.section-feedback');
 const feedbackBlock = document.createElement('div');
 feedbackBlock.classList.add('feedback-block');
 
+const feedbackButtons = document.createElement('div');
+feedbackButtons.classList.add('feedback-buttons');
+
 const feedbackImageDiv = document.createElement('div');
 feedbackImageDiv.classList.add('feedback-image-div');
 
@@ -34,23 +37,24 @@ feedbackImage.classList.add('feedback-image');
 const feedbackContent = document.createElement('div');
 feedbackContent.classList.add('feedback-content');
 
-const feedbackNameAndButtons = document.createElement('div'); // Div for name and buttons
+const feedbackNameAndButtons = document.createElement('div');
 feedbackNameAndButtons.classList.add('feedback-name-and-buttons');
 
 const feedbackName = document.createElement('p');
 feedbackName.classList.add('feedback-name');
 
 const incrButton = document.createElement('button');
-incrButton.textContent = "Next Feedback";
-incrButton.classList.add('feedback-button');
+incrButton.textContent = ">";
+incrButton.classList.add('feedback-buttons__button');
 incrButton.addEventListener('click', () => {
     counter = (counter + 1) % feedback.length;
     updateFeedback();
 });
 
 const reduceButton = document.createElement('button');
-reduceButton.textContent = "Previous Feedback";
-reduceButton.classList.add('feedback-button');
+reduceButton.textContent = "<";
+reduceButton.classList.add('feedback-buttons__button');
+
 reduceButton.addEventListener('click', () => {
     counter = (counter - 1 + feedback.length) % feedback.length;
     updateFeedback();
@@ -62,8 +66,10 @@ feedbackText.classList.add('feedback-text');
 feedbackImageDiv.appendChild(feedbackImage);
 
 feedbackNameAndButtons.appendChild(feedbackName);
-feedbackNameAndButtons.appendChild(incrButton);
-feedbackNameAndButtons.appendChild(reduceButton);
+feedbackNameAndButtons.appendChild(feedbackButtons);
+feedbackButtons.appendChild(reduceButton);
+feedbackButtons.appendChild(incrButton);
+
 
 feedbackContent.appendChild(feedbackText);
 feedbackContent.appendChild(feedbackNameAndButtons);
@@ -89,4 +95,4 @@ function goToNextFeedback() {
 updateFeedback(); // Initial update
 
 // Automatic transition every 10 seconds
-setInterval(goToNextFeedback, 10000);
+setInterval(goToNextFeedback, 13000);
