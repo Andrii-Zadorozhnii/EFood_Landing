@@ -1,0 +1,54 @@
+.footer {
+    &-lists {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    &-list {
+        &__one {
+            &-logo {
+                margin-bottom: 15px;
+            }
+
+            &-location a,
+            &-phone a,
+            &-mail a,
+            &-social a {
+                display: flex;
+                gap: 11px;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__service,
+        &__company,
+        &__support,
+        &__resources {
+            & p {
+                font-weight: bold;
+                margin-bottom: 15px;
+            }
+        }
+
+        &__link {
+            margin-bottom: 15px;
+
+            & p {
+                font-weight: 700;
+            }
+        }
+    }
+    &-terms{
+        border-top: 1px solid gray;
+        display: flex;
+        justify-content: space-between;
+        padding-top: 26px;
+        padding-bottom: 36px;
+
+        &__box{
+            display: flex;
+            gap: 50px;
+        }
+    }
+}

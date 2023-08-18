@@ -1,39 +1,39 @@
 const burgers = [{
-        id: 1,
-        Image: './../images/Popular/Slider/cheesburgerWithSalad.jpeg',
+    id: 1,
+    Image: './../images/Popular/Slider/cheesburgerWithSalad.jpeg',
 
-        rating: 0,
-        name: 'Cheeseburger With Salad',
-        price: '18',
-    },
-    {
-        id: 2,
-        Image: './../images/Popular/Slider/beefBurger.png',
-        rating: 0,
-        name: 'Beef Burger',
-        price: '15',
-    },
-    {
-        id: 3,
-        Image: './../images/Popular/Slider/RoyalChesburger.png',
-        rating: 0,
-        name: 'Royal Cheesburger',
-        price: '16',
-    },
-    {
-        id: 4,
-        Image: './../images/Popular/Slider/blackBurger.png',
-        rating: 0,
-        name: 'Black Gamburger',
-        price: '14',
-    },
-    {
-        id: 5,
-        Image: './../images/Popular/Slider/chickenBurger.png',
-        rating: 0,
-        name: 'Chicken Burger',
-        price: '15',
-    },
+    rating: 0,
+    name: 'Cheeseburger With Salad',
+    price: '18',
+  },
+  {
+    id: 2,
+    Image: './../images/Popular/Slider/beefBurger.png',
+    rating: 0,
+    name: 'Beef Burger',
+    price: '15',
+  },
+  {
+    id: 3,
+    Image: './../images/Popular/Slider/RoyalChesburger.png',
+    rating: 0,
+    name: 'Royal Cheesburger',
+    price: '16',
+  },
+  {
+    id: 4,
+    Image: './../images/Popular/Slider/blackBurger.png',
+    rating: 0,
+    name: 'Black Gamburger',
+    price: '14',
+  },
+  {
+    id: 5,
+    Image: './../images/Popular/Slider/chickenBurger.png',
+    rating: 0,
+    name: 'Chicken Burger',
+    price: '15',
+  },
 ];
 
 const pizza = [{
@@ -283,49 +283,48 @@ const asianFood = [{
 ]
 
 const setMenu = [{
-        id: 1,
-        Image: './../images/Popular/Slider/cheesburgerWithSalad.jpeg',
+    id: 1,
+    Image: './../images/Popular/Slider/cheesburgerWithSalad.jpeg',
 
-        rating: 0,
-        name: 'Cheeseburger With Salad',
-        price: '18',
-    },
-    {
-        id: 2,
-        Image: './../images/Popular/Slider/beefBurger.png',
-        rating: 0,
-        name: 'Beef Burger',
-        price: '15',
-    },
-    {
-        id: 3,
-        Image: './../images/Popular/Slider/RoyalChesburger.png',
-        rating: 0,
-        name: 'Royal Cheesburger',
-        price: '16',
-    },
-    {
-        id: 4,
-        Image: './../images/Popular/Slider/blackBurger.png',
-        rating: 0,
-        name: 'Black Gamburger',
-        price: '14',
-    },
-    {
-        id: 5,
-        Image: './../images/Popular/Slider/chickenBurger.png',
-        rating: 0,
-        name: 'Chicken Burger',
-        price: '15',
-    },
+    rating: 0,
+    name: 'Cheeseburger With Salad',
+    price: '18',
+  },
+  {
+    id: 2,
+    Image: './../images/Popular/Slider/beefBurger.png',
+    rating: 0,
+    name: 'Beef Burger',
+    price: '15',
+  },
+  {
+    id: 3,
+    Image: './../images/Popular/Slider/RoyalChesburger.png',
+    rating: 0,
+    name: 'Royal Cheesburger',
+    price: '16',
+  },
+  {
+    id: 4,
+    Image: './../images/Popular/Slider/blackBurger.png',
+    rating: 0,
+    name: 'Black Gamburger',
+    price: '14',
+  },
+  {
+    id: 5,
+    Image: './../images/Popular/Slider/chickenBurger.png',
+    rating: 0,
+    name: 'Chicken Burger',
+    price: '15',
+  },
 ]
 
 
 function createProductElement(product) {
-    const productElement = document.createElement('div');
-    productElement.classList.add('product');
-    productElement.innerHTML = `
-      <div class="slider-card">
+  const productElement = document.createElement('li');
+  productElement.classList.add('product');
+  productElement.innerHTML = `
         <img class="slider-card__image" src="${product.Image}" alt="${product.name}">
         <div class="rating slider-card__rating" 
              onmousemove="highlightStars(event, ${product.id})"
@@ -338,79 +337,78 @@ function createProductElement(product) {
         </div>
         <h3 class="slider-card__name">${product.name}</h3>
         <p class="slider-card__price">$${product.price}</p>
-        <button class="btn slider-card__button">Add to Cart</button>
-      </div>
+        <button class="btn slider-card__button b">Add to Cart</button>
     `;
-    return productElement;
+  return productElement;
 }
 
 function highlightStars(event, productId) {
-    const stars = document.querySelectorAll(`.product[data-id="${productId}"] .star`);
-    const mouseX = event.clientX;
+  const stars = document.querySelectorAll(`.product[data-id="${productId}"] .star`);
+  const mouseX = event.clientX;
 
-    stars.forEach((star, index) => {
-        const starX = star.getBoundingClientRect().left;
-        if (mouseX >= starX) {
-            star.classList.add('active');
-        } else {
-            star.classList.remove('active');
-        }
-    });
+  stars.forEach((star, index) => {
+    const starX = star.getBoundingClientRect().left;
+    if (mouseX >= starX) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
 }
 
 function resetStars(productId) {
-    const stars = document.querySelectorAll(`.product[data-id="${productId}"] .star`);
-    stars.forEach((star) => {
-        star.classList.remove('active');
-    });
+  const stars = document.querySelectorAll(`.product[data-id="${productId}"] .star`);
+  stars.forEach((star) => {
+    star.classList.remove('active');
+  });
 }
 
 async function rate(productId, stars) {
-    const productElement = document.querySelector(`.product[data-id="${productId}"]`);
-    const product = burgers.find((p) => p.id === productId);
+  const productElement = document.querySelector(`.product[data-id="${productId}"]`);
+  const product = burgers.find((p) => p.id === productId);
 
-    product.rating = stars;
-    const starsElements = productElement.querySelectorAll('.star');
-    starsElements.forEach((star, index) => {
-        if (index < stars) {
-            star.classList.add('active');
-        } else {
-            star.classList.remove('active');
-        }
+  product.rating = stars;
+  const starsElements = productElement.querySelectorAll('.star');
+  starsElements.forEach((star, index) => {
+    if (index < stars) {
+      star.classList.add('active');
+    } else {
+      star.classList.remove('active');
+    }
+  });
+
+  try {
+    const response = await fetch('URL_ВАШЕГО_СЕРВЕРА', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        productId,
+        stars
+      }),
     });
 
-    try {
-        const response = await fetch('URL_ВАШЕГО_СЕРВЕРА', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({
-                productId,
-                stars
-            }),
-        });
-
-        if (response.ok) {
-            console.log('Рейтинг успешно отправлен на сервер.');
-        } else {
-            console.log('Ошибка при отправке рейтинга на сервер:', response.status);
-        }
-    } catch (error) {
-        console.log('Произошла ошибка при отправке рейтинга:', error.message);
+    if (response.ok) {
+      console.log('Рейтинг успешно отправлен на сервер.');
+    } else {
+      console.log('Ошибка при отправке рейтинга на сервер:', response.status);
     }
+  } catch (error) {
+    console.log('Произошла ошибка при отправке рейтинга:', error.message);
+  }
 }
 
 function updateProducts(category) {
-    const products = category;
-    const productsContainer = document.getElementById('products-container');
-    productsContainer.innerHTML = '';
+  const products = category;
+  const productsContainer = document.getElementById('products-container');
+  productsContainer.innerHTML = '';
 
-    products.forEach((product) => {
-        const productElement = createProductElement(product);
-        productElement.setAttribute('data-id', product.id);
-        productsContainer.appendChild(productElement);
-    });
+  products.forEach((product) => {
+    const productElement = createProductElement(product);
+    productElement.setAttribute('data-id', product.id);
+    productsContainer.appendChild(productElement);
+  });
 }
 
 const productsContainer = document.getElementById('products-container');
@@ -418,18 +416,20 @@ updateProducts(burgers);
 
 const categoryButtons = document.querySelectorAll('.category-button');
 categoryButtons.forEach((button) => {
-    button.addEventListener('click', (event) => {
-        const selectedCategory = event.target.dataset.category;
-        if (selectedCategory === 'burger') {
-            updateProducts(burgers);
-        } else if (selectedCategory === 'pizza') {
-            updateProducts(pizza);
-        } else if (selectedCategory === 'sandwich') {
-            updateProducts(sandwich);
-        } else if (selectedCategory === 'asianFood') {
-            updateProducts(asianFood);
-        } else if (selectedCategory === 'setMenu') {
-            updateProducts(setMenu);
-        }
-    });
+  button.addEventListener('click', (event) => {
+    const selectedCategory = event.target.dataset.category;
+    if (selectedCategory === 'burger') {
+      updateProducts(burgers);
+    } else if (selectedCategory === 'pizza') {
+      updateProducts(pizza);
+    } else if (selectedCategory === 'sandwich') {
+      updateProducts(sandwich);
+    } else if (selectedCategory === 'asianFood') {
+      updateProducts(asianFood);
+    } else if (selectedCategory === 'setMenu') {
+      updateProducts(setMenu);
+    }
+  });
 });
+
+

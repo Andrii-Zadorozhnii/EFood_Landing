@@ -49,9 +49,7 @@ nav {
   content: "";
   right: 25%;
   top: 40%;
-  width: -moz-fit-content;
   width: fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   background-color: red;
   border-radius: 6px;
@@ -599,4 +597,6 @@ nav {
   100% {
     transform: translate(calc(var(--radius) * sin(360deg)), calc(var(--radius) * cos(360deg)));
   }
-}/*# sourceMappingURL=header.css.map */
+}
+
+/*# sourceMappingURL=header.css.map */

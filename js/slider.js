@@ -1,3 +1,6 @@
+
+// Rating
+
 function highlightStars(event) {
     const stars = document.querySelectorAll('.star');
     const mouseX = event.clientX;

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @import url("./../0.root/root.css");
 .food-box {
   width: 210px;
@@ -51,81 +50,6 @@
 .section-popular__food-cathegory {
   display: flex;
   flex-wrap: wrap;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/*Slider */
-.slider {
-  height: 350px;
-  width: 100%;
-  background: tomato;
-  text-align: center;
-  margin-bottom: 87px;
-  color: var(--primary-color);
-  font-size: 15px;
-  font-style: normal;
-  line-height: normal;
-}
-.slider-card {
-  width: 208px;
-  height: 279px;
-  border-radius: 12px;
-  background: white;
-}
-.slider-card__image {
-  width: 114px;
-  height: 114px;
-  margin: 0 auto;
-}
-.slider-card__rating {
-  width: 100px;
-  height: 20px;
-  margin: 0 auto;
-  position: relative;
-  top: -10px;
-  margin-bottom: 5px;
-}
-.slider-card__name {
-  font-weight: 400;
-  margin-bottom: 9px;
-  text-align: center;
-}
-.slider-card__price {
-  font-weight: 500;
-  text-align: center;
-  margin-bottom: 11px;
-}
-.slider-card__button {
-  margin: 0 auto;
-  display: flex;
-}
-
-.rating {
-  font-size: 0;
-  /* Убираем пробелы между инлайновыми элементами */
-}
-
-.star {
-  display: inline-block;
-  /* Отображаем звезды в ряд */
-  font-size: 20px;
-  cursor: pointer;
-  color: #ccc;
-  transition: color 0.2s;
-}
-
-.star:hover,
-.star.active {
-  color: #FAC412;
-}
-
-.product {
-  margin-bottom: 20px;
-}
-
-#products-container {
-  display: flex;
   align-items: center;
   justify-content: space-between;
 }/*# sourceMappingURL=section-popular.css.map */

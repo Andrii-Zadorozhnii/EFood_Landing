@@ -1,0 +1,34 @@
+.footer-lists {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.footer-list__one-logo {
+  margin-bottom: 15px;
+}
+.footer-list__one-location a, .footer-list__one-phone a, .footer-list__one-mail a, .footer-list__one-social a {
+  display: flex;
+  gap: 11px;
+  margin-bottom: 15px;
+}
+.footer-list__service p, .footer-list__company p, .footer-list__support p, .footer-list__resources p {
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+.footer-list__link {
+  margin-bottom: 15px;
+}
+.footer-list__link p {
+  font-weight: 700;
+}
+.footer-terms {
+  border-top: 1px solid gray;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 26px;
+  padding-bottom: 36px;
+}
+.footer-terms__box {
+  display: flex;
+  gap: 50px;
+}/*# sourceMappingURL=footer.css.map */

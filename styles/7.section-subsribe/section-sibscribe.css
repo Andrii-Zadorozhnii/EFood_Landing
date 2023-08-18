@@ -6,6 +6,7 @@
   padding: 59px 165px;
   background: var(--secondary-color);
   border-radius: 20px;
+  margin-bottom: 120px;
 }
 .section-subscribe__title {
   color: var(--main-back-white);
