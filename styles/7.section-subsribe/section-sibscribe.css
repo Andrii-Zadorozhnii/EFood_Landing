@@ -54,4 +54,11 @@
   background: var(--secondary-color);
   align-items: center;
   animation: none !important;
+}
+
+@media screen and (max-width: 1200px) {
+  .section-subscribe {
+    max-width: 100%;
+    padding: 20px 40px;
+  }
 }/*# sourceMappingURL=section-sibscribe.css.map */

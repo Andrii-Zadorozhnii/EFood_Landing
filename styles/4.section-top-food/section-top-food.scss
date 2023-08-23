@@ -68,3 +68,9 @@
     animation-delay: 1s;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .section-topFood__cards-card{
+    margin: 0 auto;
+  }
+}

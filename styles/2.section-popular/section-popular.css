@@ -52,4 +52,45 @@
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+#products-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.product {
+  width: 208px;
+  height: 279px;
+  align-items: center;
+  text-align: center;
+  border-radius: 12px;
+  background: #FFF;
+}
+.product img {
+  box-sizing: border-box;
+  width: 144px;
+  height: 144px;
+  margin: 0 auto;
+}
+
+.rating {
+  position: relative;
+  top: -20pxvjd;
+}
+
+@media screen and (max-width: 1330px) {
+  #products-container {
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 20px;
+  }
+  .section-popular__food-cathegory {
+    align-items: center;
+    JUSTIFY-CONTENT: CENTER;
+    gap: 10px;
+  }
+  .product {
+    margin: 0 auto;
+  }
 }/*# sourceMappingURL=section-popular.css.map */
